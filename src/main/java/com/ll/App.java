@@ -2,36 +2,30 @@ package com.ll;
 
 import java.util.Scanner;
 
-//// 1단계
-//public class App {
-//    void run() {
-//        System.out.println("== 명언 앱 ==");
-//
-//        System.out.print("명령) ");
-//
-//        Scanner scanner = new Scanner(System.in);
-//        String cmd = scanner.nextLine();
-//
-//        System.out.printf("입력하신 명령 : %s\n", cmd);
-//        // 위 라인은 아래 라인과 같은 뜻
-//        // System.out.println("입력하신 명령 : " + cmd + "\n");
-//    }
-//}
 public class App {
     void run() {
+        int loop_count = 0;
         System.out.println("== 명언 앱 ==");
 
-        System.out.print("명령) ");
-
         while (true) {
+            System.out.print("명령) ");
             Scanner scanner = new Scanner(System.in);
             String cmd = scanner.nextLine();
 
             if (cmd.equals("종료")) {
                 break;
             } else if (cmd.equals("등록")) {
-                System.out.println("명언 : ");
-                System.out.println("작가 : ");
+                System.out.print("명언 : ");
+                Scanner wsc = new Scanner(System.in);
+                String Wisesaying = scanner.nextLine();
+                System.out.print("작가 : ");
+                Scanner a = new Scanner(System.in);
+                String Athor = scanner.nextLine();
+                loop_count = loop_count + 1;
+
+                System.out.println(loop_count + "번 명언이 등록되었습니다.");
+
+                continue;
             }
         }
     }
